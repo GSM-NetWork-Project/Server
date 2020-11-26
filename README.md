@@ -133,9 +133,9 @@ CREATE TABLE `answer_vote` (
 [{
   "id"          : 1,
   "owner_id"    : 1,
-  "title"       : "Node.js, MySQL 연결 중 오류",
+  "title"       : "npm 프로젝트에서 오류가 발생합니다",
   "theme"       : "프로그래밍",
-  "text"        : "npm 프로젝트 실행 시 MODULE_NOT_FOUND라는 에러가...",
+  "text"        : "프로젝트 실행 시 index.js에서 MODULE_NOT_FOUND라는 에러가...",
   "is_solved"   : 0,
   "upload_time" : "2020-11-25T15:00:00.000Z"
 }, { ... }, ...]
