@@ -1,0 +1,27 @@
+{
+  "name": "Server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon server.js -w server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSM-NetWork-Project/Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSM-NetWork-Project/Server/issues"
+  },
+  "homepage": "https://github.com/GSM-NetWork-Project/Server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
