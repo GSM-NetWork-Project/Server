@@ -35,37 +35,37 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api/getUser', selectUserRouter);
-app.use('/api/getQuestion', selectQuestionRouter);
-app.use('/api/getQuestionComment', selectQuestionCommentRouter);
-app.use('/api/getQuestionVote', selectQuestionVoteRouter);
-app.use('/api/getAnswer', selectAnswerRouter);
-app.use('/api/getAnswerComment', selectAnswerCommentRouter);
-app.use('/api/getAnswerVote', selectAnswerVoteRouter);
+app.use('/api/get_user', selectUserRouter);
+app.use('/api/get_question', selectQuestionRouter);
+app.use('/api/get_question_comment', selectQuestionCommentRouter);
+app.use('/api/get_question_vote', selectQuestionVoteRouter);
+app.use('/api/get_answer', selectAnswerRouter);
+app.use('/api/get_answer_comment', selectAnswerCommentRouter);
+app.use('/api/get_answer_vote', selectAnswerVoteRouter);
 
-app.use('/api/createUser', insertUserRouter);
-app.use('/api/createQuestion', insertQuestionRouter);
-app.use('/api/createQuestionComment', insertQuestionCommentRouter);
-app.use('/api/createQuestionVote', insertQuestionVoteRouter);
-app.use('/api/createAnswer', insertAnswerRouter);
-app.use('/api/createAnswerComment', insertAnswerCommentRouter);
-app.use('/api/createAnswerVote', insertAnswerVoteRouter);
+app.use('/api/add_user', insertUserRouter);
+app.use('/api/add_question', insertQuestionRouter);
+app.use('/api/add_question_comment', insertQuestionCommentRouter);
+app.use('/api/add_question_vote', insertQuestionVoteRouter);
+app.use('/api/add_answer', insertAnswerRouter);
+app.use('/api/add_answer_comment', insertAnswerCommentRouter);
+app.use('/api/add_answer_vote', insertAnswerVoteRouter);
 
-app.use('/api/modifyUser', updateUserRouter);
-app.use('/api/modifyQuestion', updateQuestionRouter);
-app.use('/api/modifyQuestionComment', updateQuestionCommentRouter);
-app.use('/api/modifyQuestionVote', updateQuestionVoteRouter);
-app.use('/api/modifyAnswer', updateAnswerRouter);
-app.use('/api/modifyAnswerComment', updateAnswerCommentRouter);
-app.use('/api/modifyAnswerVote', updateAnswerVoteRouter);
+app.use('/api/modify_user', updateUserRouter);
+app.use('/api/modify_question', updateQuestionRouter);
+app.use('/api/modify_question_comment', updateQuestionCommentRouter);
+app.use('/api/modify_question_vote', updateQuestionVoteRouter);
+app.use('/api/modify_answer', updateAnswerRouter);
+app.use('/api/modify_answer_comment', updateAnswerCommentRouter);
+app.use('/api/modify_answer_vote', updateAnswerVoteRouter);
 
-app.use('/api/removeUser', deleteUserRouter);
-app.use('/api/removeQuestion', deleteQuestionRouter);
-app.use('/api/removeQuestionComment', deleteQuestionCommentRouter);
-app.use('/api/removeQuestionVote', deleteQuestionVoteRouter);
-app.use('/api/removeAnswer', deleteAnswerRouter);
-app.use('/api/removeAnswerComment', deleteAnswerCommentRouter);
-app.use('/api/removeAnswerVote', deleteAnswerVoteRouter);
+app.use('/api/remove_user', deleteUserRouter);
+app.use('/api/remove_question', deleteQuestionRouter);
+app.use('/api/remove_question_comment', deleteQuestionCommentRouter);
+app.use('/api/remove_question_vote', deleteQuestionVoteRouter);
+app.use('/api/remove_answer', deleteAnswerRouter);
+app.use('/api/remove_answer_comment', deleteAnswerCommentRouter);
+app.use('/api/remove_answer_vote', deleteAnswerVoteRouter);
 
 port = process.env.PORT || '3000';
 
