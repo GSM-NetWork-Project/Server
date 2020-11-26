@@ -131,13 +131,13 @@ CREATE TABLE `answer_vote` (
 인자값과 일치하는 모든 질문의 JSON 리스트
 ```javascript
 [{
-        "id"          : 1,
-        "owner_id"    : 1,
-        "title"       : "Node.js, MySQL 연결 중 오류",
-        "theme"       : "프로그래밍",
-        "text"        : "npm 프로젝트 실행 시 MODULE_NOT_FOUND라는 에러가...",
-        "is_solved"   : 0,
-        "upload_time" : "2020-11-25T15:00:00.000Z"
+  "id"          : 1,
+  "owner_id"    : 1,
+  "title"       : "Node.js, MySQL 연결 중 오류",
+  "theme"       : "프로그래밍",
+  "text"        : "npm 프로젝트 실행 시 MODULE_NOT_FOUND라는 에러가...",
+  "is_solved"   : 0,
+  "upload_time" : "2020-11-25T15:00:00.000Z"
 }, { ... }, ...]
 ```
 ### 답변 조회
@@ -158,11 +158,11 @@ CREATE TABLE `answer_vote` (
 인자값과 일치하는 모든 답변의 JSON 리스트
 ```javascript
 [{
-        "id"          : 1,
-        "question_id" : 1,
-        "owner_id"    : 2,
-        "text"        : "그 오류는 모듈로 임포트 하려는 파일의 경로나 이름이 안 맞아서 생기는 것으로...",
-        "upload_time" : "2020-11-25T15:00:00.000Z"
+  "id"          : 1,
+  "question_id" : 1,
+  "owner_id"    : 2,
+  "text"        : "그 오류는 모듈로 임포트 하려는 파일의 경로나 이름이 안 맞아서 생기는 것으로...",
+  "upload_time" : "2020-11-25T15:00:00.000Z"
 }, { ... }, ...]
 ```
 ### 질문 댓글 조회
@@ -183,11 +183,11 @@ CREATE TABLE `answer_vote` (
 인자값과 일치하는 모든 질문 댓글의 JSON 리스트
 ```javascript
 [{
-        "id"          : 1,
-        "question_id" : 1,
-        "owner_id"    : 3,
-        "text"        : "저도 궁금합니다.",
-        "upload_time" : "2020-11-25T15:00:00.000Z"
+  "id"          : 1,
+  "question_id" : 1,
+  "owner_id"    : 3,
+  "text"        : "저도 궁금합니다.",
+  "upload_time" : "2020-11-25T15:00:00.000Z"
 }, { ... }, ...]
 ```
 ### 답변 댓글 조회
@@ -208,11 +208,11 @@ CREATE TABLE `answer_vote` (
 인자값과 일치하는 모든 답변 댓글의 JSON 리스트
 ```javascript
 [{
-        "id"          : 1,
-        "answer_id"   : 1,
-        "owner_id"    : 1,
-        "text"        : "답변하신 내용이 도움이 되었습니다.",
-        "upload_time" : "2020-11-25T15:00:00.000Z"
+  "id"          : 1,
+  "answer_id"   : 1,
+  "owner_id"    : 1,
+  "text"        : "답변하신 내용이 도움이 되었습니다.",
+  "upload_time" : "2020-11-25T15:00:00.000Z"
 }, { ... }, ...]
 ```
 ### 질문 투표 조회
@@ -231,9 +231,9 @@ CREATE TABLE `answer_vote` (
 인자값과 일치하는 모든 질문 투표의 JSON 리스트
 ```javascript
 [{
-        "question_id" : 1,
-        "owner_id"    : 3,
-        "type"        : 1,
+  "question_id" : 1,
+  "owner_id"    : 3,
+  "type"        : 1,
 }, { ... }, ...]
 ```
 ### 답변 투표 조회
@@ -252,9 +252,9 @@ CREATE TABLE `answer_vote` (
 인자값과 일치하는 모든 답변 투표의 JSON 리스트
 ```javascript
 [{
-        "answer_id" : 1,
-        "owner_id"  : 1,
-        "type"      : 1,
+  "answer_id" : 1,
+  "owner_id"  : 1,
+  "type"      : 1,
 }, { ... }, ...]
 ```
 ## 생성
