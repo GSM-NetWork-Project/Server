@@ -104,11 +104,11 @@ CREATE TABLE `answer_vote` (
 인자값과 일치하는 모든 유저의 JSON 리스트
 ```javascript
 [{
-        "id": 1,
-        "name": "정영우",
-        "email": "zetafie125@gmail.com",
-        "password": "1234",
-        "join_time": "2020-11-25T15:00:00.000Z"
+  "id": 1,
+  "name": "정영우",
+  "email": "zetafie125@gmail.com",
+  "password": "1234",
+  "join_time": "2020-11-25T15:00:00.000Z"
 }, { ... }, ...]
 ```
 ### 질문 조회
