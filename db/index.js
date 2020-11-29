@@ -20,7 +20,7 @@ kovfdb.Select = async (table, query) => {
         selectQuery = `SELECT * FROM ${table}`;
 
         if (Object.keys(query).length > 0) {
-            selectQuery += ` WHERE ${queryString.join(",")}`;
+            selectQuery += ` WHERE ${queryString.join(" AND ")}`;
         }
 
         pool.query(selectQuery, (err, results) => {
@@ -68,7 +68,7 @@ kovfdb.Update = async (table, query) => {
             }
         }
 
-        updateQuery = `UPDATE ${table} SET ${setQueryString.join(",")} WHERE ${whereQueryString.join(",")}`;
+        updateQuery = `UPDATE ${table} SET ${setQueryString.join(",")} WHERE ${whereQueryString.join(" AND ")}`;
 
         pool.query(updateQuery, (err, results) => {
             if (err) {
@@ -88,7 +88,7 @@ kovfdb.Delete = async (table, query) => {
             queryString.push(`${Object.keys(query)[index]} = '${Object.values(query)[index]}'`)
         }
 
-        deleteQuery = `DELETE FROM ${table} WHERE ${queryString.join(",")}`;
+        deleteQuery = `DELETE FROM ${table} WHERE ${queryString.join(" AND ")}`;
 
         pool.query(deleteQuery, (err, results) => {
             if (err) {
