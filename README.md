@@ -101,16 +101,16 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 유저의 JSON 리스트
-```json
+인자값과 일치하는 모든 유저의 javascript 리스트
+```javascript
 {
   "status": 200,
-  "result": [
-    "id": 1,
-    "name": "정영우",
-    "email": "zetafie125@gmail.com",
-    "password": "1234",
-    "join_time": "2020-11-25T15:00:00.000Z"
+  "result": [{
+    "id"        : 1,
+    "name"      : "정영우",
+    "email"     : "zetafie125@gmail.com",
+    "password"  : "1234",
+    "join_time" : "2020-11-25T15:00:00.000Z"
   }, { ... }, ...]
 }
 ```
@@ -131,8 +131,8 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문의 JSON 리스트
-```json
+인자값과 일치하는 모든 질문의 javascript 리스트
+```javascript
 {
   "status": 200,
   "result": [{
@@ -161,8 +161,8 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변의 JSON 리스트
-```json
+인자값과 일치하는 모든 답변의 javascript 리스트
+```javascript
 {
   "status": 200,
   "result": [{
@@ -189,8 +189,8 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문 댓글의 JSON 리스트
-```json
+인자값과 일치하는 모든 질문 댓글의 javascript 리스트
+```javascript
 {
   "status": 200,
   "result": [{
@@ -217,8 +217,8 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변 댓글의 JSON 리스트
-```json
+인자값과 일치하는 모든 답변 댓글의 javascript 리스트
+```javascript
 {
   "status": 200,
   "result": [{
@@ -243,8 +243,8 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문 투표의 JSON 리스트
-```json
+인자값과 일치하는 모든 질문 투표의 javascript 리스트
+```javascript
 {
   "status": 200,
   "result": [{
@@ -267,8 +267,8 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변 투표의 JSON 리스트
-```json
+인자값과 일치하는 모든 답변 투표의 javascript 리스트
+```javascript
 {
   "status": 200,
   "result": [{
@@ -283,7 +283,7 @@ CREATE TABLE `answer_vote` (
 ###### 응답
 
 성공 시 200(OK), 실패 시 500(Internal Server Error)
-```json
+```javascript
 {
   "status": 200
 }
@@ -390,7 +390,7 @@ CREATE TABLE `answer_vote` (
 ###### 응답
 
 성공 시 200(OK), 실패 시 500(Internal Server Error)
-```json
+```javascript
 {
   "status": 200
 }
@@ -447,7 +447,7 @@ CREATE TABLE `answer_vote` (
 ###### 응답
 
 성공 시 200(OK), 실패 시 500(Internal Server Error)
-```json
+```javascript
 {
   "status": 200
 }
