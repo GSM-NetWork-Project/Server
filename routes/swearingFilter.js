@@ -1,7 +1,7 @@
 // 출처: 2010 네이버 금칙어 리스트
 
 module.exports = {
-    CheckSwearing: async function(text) {
+    GetSwearing: async function(text) {
         swearing = [
             "캐쉬스파이더",
             "캐시스파이더",
