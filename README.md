@@ -101,7 +101,7 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 유저의 javascript 리스트
+인자값과 일치하는 모든 유저의 JSON 리스트
 ```javascript
 {
   "status": 200,
@@ -131,7 +131,7 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문의 javascript 리스트
+인자값과 일치하는 모든 질문의 JSON 리스트
 ```javascript
 {
   "status": 200,
@@ -161,7 +161,7 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변의 javascript 리스트
+인자값과 일치하는 모든 답변의 JSON 리스트
 ```javascript
 {
   "status": 200,
@@ -189,7 +189,7 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문 댓글의 javascript 리스트
+인자값과 일치하는 모든 질문 댓글의 JSON 리스트
 ```javascript
 {
   "status": 200,
@@ -217,7 +217,7 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변 댓글의 javascript 리스트
+인자값과 일치하는 모든 답변 댓글의 JSON 리스트
 ```javascript
 {
   "status": 200,
@@ -243,7 +243,7 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문 투표의 javascript 리스트
+인자값과 일치하는 모든 질문 투표의 JSON 리스트
 ```javascript
 {
   "status": 200,
@@ -267,7 +267,7 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변 투표의 javascript 리스트
+인자값과 일치하는 모든 답변 투표의 JSON 리스트
 ```javascript
 {
   "status": 200,
@@ -493,3 +493,53 @@ CREATE TABLE `answer_vote` (
 
 ###### URL
     /api/remove_answer_vote
+
+## 검사
+
+### 비슷한 질문 검사 
+
+###### URL
+
+    /api/check_similar_question
+
+###### 인자
+- `text` 비슷한 제목의 질문들을 찾을 키워드
+
+###### 응답
+
+인자값과 1/3 이상 일치하는 제목을 가진 JSON 리스트
+```javascript
+{
+  "status": 200,
+  "result": [{
+    "id"    : 1,
+    "name"  : "SQL문 문제 발생"
+  },
+  {
+    "id"    : 2,
+    "name"  : "SQL 쿼리 오류 발생"
+  },
+  }, { ... }, ...]
+}
+```
+### 비속어 검사
+
+###### URL
+
+    /api/check_swearing
+
+###### 인자
+- `text` 비속어를 검사할 텍스트
+
+###### 응답
+
+인자값에 포함된 모든 비속어의 JSON 리스트
+```javascript
+{
+  "status": 200,
+  "result": [
+    '시*'
+    '병*'
+  ..., ...]
+}
+```
