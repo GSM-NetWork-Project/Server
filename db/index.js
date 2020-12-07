@@ -9,7 +9,7 @@ const pool = mysql.createPool({
 
 let kovfdb = {};
 
-kovfdb.Select = async (table, query) => {
+kovfdb.Select = async (table, query, column = '*') => {
     return new Promise((resolve, reject) => {
         let queryString = []
         
@@ -17,7 +17,7 @@ kovfdb.Select = async (table, query) => {
             queryString.push(`${Object.keys(query)[index]} = '${Object.values(query)[index]}'`)
         }
 
-        selectQuery = `SELECT * FROM ${table}`;
+        selectQuery = `SELECT ${column} FROM ${table}`;
 
         if (Object.keys(query).length > 0) {
             selectQuery += ` WHERE ${queryString.join(" AND ")}`;
