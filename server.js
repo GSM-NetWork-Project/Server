@@ -30,6 +30,9 @@ const deleteAnswerRouter = require('./routes/delete/answer.js');
 const deleteAnswerCommentRouter = require('./routes/delete/answerComment.js');
 const deleteAnswerVoteRouter = require('./routes/delete/answerVote.js');
 
+const checkSwearing = require('./routes/check/swearing.js');
+const checkSimilarQuestion = require('./routes/check/similarQuestion.js');
+
 const express = require('express');
 const app = express();
 
@@ -66,6 +69,9 @@ app.use('/api/remove_question_vote', deleteQuestionVoteRouter);
 app.use('/api/remove_answer', deleteAnswerRouter);
 app.use('/api/remove_answer_comment', deleteAnswerCommentRouter);
 app.use('/api/remove_answer_vote', deleteAnswerVoteRouter);
+
+app.use('/api/check_swearing', checkSwearing);
+app.use('/api/check_similar_question', checkSimilarQuestion);
 
 port = process.env.PORT || '3000';
 
