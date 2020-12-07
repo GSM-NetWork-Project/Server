@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
-    await response.Select(req, res, 'questionComment');
+    await response.Select(req, res, 'question_comment');
 });
 
 module.exports = router;

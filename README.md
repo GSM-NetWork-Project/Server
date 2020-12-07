@@ -101,15 +101,18 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 유저의 JSON 리스트
+인자값과 일치하는 모든 유저의 javascript 리스트
 ```javascript
-[{
-  "id": 1,
-  "name": "정영우",
-  "email": "zetafie125@gmail.com",
-  "password": "1234",
-  "join_time": "2020-11-25T15:00:00.000Z"
-}, { ... }, ...]
+{
+  "status": 200,
+  "result": [{
+    "id"        : 1,
+    "name"      : "정영우",
+    "email"     : "zetafie125@gmail.com",
+    "password"  : "1234",
+    "join_time" : "2020-11-25T15:00:00.000Z"
+  }, { ... }, ...]
+}
 ```
 ### 질문 조회
 
@@ -128,17 +131,20 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문의 JSON 리스트
+인자값과 일치하는 모든 질문의 javascript 리스트
 ```javascript
-[{
-  "id"          : 1,
-  "owner_id"    : 1,
-  "title"       : "npm 프로젝트에서 오류가 발생합니다",
-  "theme"       : "프로그래밍",
-  "text"        : "프로젝트 실행 시 index.js에서 MODULE_NOT_FOUND라는 에러가...",
-  "is_solved"   : 0,
-  "upload_time" : "2020-11-25T15:00:00.000Z"
-}, { ... }, ...]
+{
+  "status": 200,
+  "result": [{
+    "id"          : 1,
+    "owner_id"    : 1,
+    "title"       : "npm 프로젝트에서 오류가 발생합니다",
+    "theme"       : "프로그래밍",
+    "text"        : "프로젝트 실행 시 index.js에서 MODULE_NOT_FOUND라는 에러가...",
+    "is_solved"   : 0,
+    "upload_time" : "2020-11-25T15:00:00.000Z"
+  }, { ... }, ...]
+}
 ```
 ### 답변 조회
 
@@ -155,15 +161,18 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변의 JSON 리스트
+인자값과 일치하는 모든 답변의 javascript 리스트
 ```javascript
-[{
-  "id"          : 1,
-  "question_id" : 1,
-  "owner_id"    : 2,
-  "text"        : "그 오류는 모듈로 임포트 하려는 파일의 경로나 이름이 안 맞아서 생기는 것으로...",
-  "upload_time" : "2020-11-25T15:00:00.000Z"
-}, { ... }, ...]
+{
+  "status": 200,
+  "result": [{
+    "id"          : 1,
+    "question_id" : 1,
+    "owner_id"    : 2,
+    "text"        : "그 오류는 모듈로 임포트 하려는 파일의 경로나 이름이 안 맞아서 생기는 것으로...",
+    "upload_time" : "2020-11-25T15:00:00.000Z"
+  }, { ... }, ...]
+}
 ```
 ### 질문 댓글 조회
 
@@ -180,15 +189,18 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문 댓글의 JSON 리스트
+인자값과 일치하는 모든 질문 댓글의 javascript 리스트
 ```javascript
-[{
-  "id"          : 1,
-  "question_id" : 1,
-  "owner_id"    : 3,
-  "text"        : "저도 궁금합니다.",
-  "upload_time" : "2020-11-25T15:00:00.000Z"
-}, { ... }, ...]
+{
+  "status": 200,
+  "result": [{
+    "id"          : 1,
+    "question_id" : 1,
+    "owner_id"    : 3,
+    "text"        : "저도 궁금합니다.",
+    "upload_time" : "2020-11-25T15:00:00.000Z"
+  }, { ... }, ...]
+}
 ```
 ### 답변 댓글 조회
 
@@ -205,15 +217,18 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변 댓글의 JSON 리스트
+인자값과 일치하는 모든 답변 댓글의 javascript 리스트
 ```javascript
-[{
-  "id"          : 1,
-  "answer_id"   : 1,
-  "owner_id"    : 1,
-  "text"        : "답변하신 내용이 도움이 되었습니다.",
-  "upload_time" : "2020-11-25T15:00:00.000Z"
-}, { ... }, ...]
+{
+  "status": 200,
+  "result": [{
+    "id"          : 1,
+    "answer_id"   : 1,
+    "owner_id"    : 1,
+    "text"        : "답변하신 내용이 도움이 되었습니다.",
+    "upload_time" : "2020-11-25T15:00:00.000Z"
+  }, { ... }, ...]
+}
 ```
 ### 질문 투표 조회
 
@@ -228,13 +243,16 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 질문 투표의 JSON 리스트
+인자값과 일치하는 모든 질문 투표의 javascript 리스트
 ```javascript
-[{
-  "question_id" : 1,
-  "owner_id"    : 3,
-  "type"        : 1,
-}, { ... }, ...]
+{
+  "status": 200,
+  "result": [{
+    "question_id" : 1,
+    "owner_id"    : 3,
+    "type"        : 1,
+  }, { ... }, ...]
+}
 ```
 ### 답변 투표 조회
 
@@ -249,19 +267,27 @@ CREATE TABLE `answer_vote` (
 
 ###### 응답
 
-인자값과 일치하는 모든 답변 투표의 JSON 리스트
+인자값과 일치하는 모든 답변 투표의 javascript 리스트
 ```javascript
-[{
-  "answer_id" : 1,
-  "owner_id"  : 1,
-  "type"      : 1,
-}, { ... }, ...]
+{
+  "status": 200,
+  "result": [{
+    "answer_id" : 1,
+    "owner_id"  : 1,
+    "type"      : 1,
+  }, { ... }, ...]
+}
 ```
 ## 생성
 
 ###### 응답
 
 성공 시 200(OK), 실패 시 500(Internal Server Error)
+```javascript
+{
+  "status": 200
+}
+```
 
 ### 유저 생성 
 
@@ -364,6 +390,11 @@ CREATE TABLE `answer_vote` (
 ###### 응답
 
 성공 시 200(OK), 실패 시 500(Internal Server Error)
+```javascript
+{
+  "status": 200
+}
+```
 
 ### 유저 수정
 
@@ -416,44 +447,49 @@ CREATE TABLE `answer_vote` (
 ###### 응답
 
 성공 시 200(OK), 실패 시 500(Internal Server Error)
+```javascript
+{
+  "status": 200
+}
+```
 
 ### 유저 삭제
 
 ###### URL
 
-    /api/delete_user
+    /api/remove_user
 
 ### 질문 삭제
 
 ###### URL
 
-    /api/delete_answer
+    /api/remove_answer
 
 ### 답변 삭제
 
 ###### URL
 
-    /api/delete_answer
+    /api/remove_answer
 
 ### 질문 댓글 삭제
 
 ###### URL
 
-    /api/delete_question_comment
+    /api/remove_question_comment
 
 ### 답변 댓글 삭제
 
 ###### URL
 
-    /api/delete_answer_comment
+    /api/remove_answer_comment
 
 ### 질문 투표 삭제
 
 ###### URL
 
-    /api/delete_question_vote
+    /api/remove_question_vote
 
 ### 답변 투표 삭제
 
 ###### URL
-    /api/delete_answer_vote
+    /api/remove_answer_vote
