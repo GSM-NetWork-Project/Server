@@ -91,7 +91,7 @@ module.exports = {
             parsedUrl = url.parse(req.url);
             parsedQuery = querystring.parse(parsedUrl.query, "&", "=");
 
-            swearing = await swearingFilter.CheckSwearing(parsedQuery.text);
+            swearing = await swearingFilter.GetSwearing(parsedQuery.text);
 
             if (swearing.length == 0) {
                 throw 'found zero results';
