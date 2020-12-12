@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 const pool = mysql.createPool({
     host:       'localhost',
-    port:       '3310',
+    port:       '3306',
     user:       'root',
     password:   '1234',
-    database:   'kovf'
+    database:   'project'
 });
 
 let kovfdb = {};

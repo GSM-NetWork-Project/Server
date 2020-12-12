@@ -99,7 +99,7 @@ module.exports = {
 
             res.json({
                 status: 200,
-                swearing: swearing
+                result: swearing
             });
         } catch (e) {
             console.log(e);
@@ -129,7 +129,7 @@ module.exports = {
 
             res.json({
                 status: 200,
-                similar_question: similarQuestion
+                result: similarQuestion
             });
         } catch (e) {
             console.log(e);
