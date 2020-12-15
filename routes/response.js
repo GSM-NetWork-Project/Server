@@ -10,7 +10,7 @@ module.exports = {
             parsedUrl = url.parse(req.url);
             parsedQuery = querystring.parse(parsedUrl.query, "&", "=");
 
-            let results = await db.Select(table, parsedQuery);
+            let results = await db.Select(table, '*', parsedQuery);
             
             if (results.length == 0) {
                 throw 'selected zero rows';
@@ -114,14 +114,14 @@ module.exports = {
             parsedUrl = url.parse(req.url);
             parsedQuery = querystring.parse(parsedUrl.query, "&", "=")
 
-            question = await db.Select('question', '', 'id, title')
+            question = await db.Select('question')
             similarQuestion = [];
 
-            for (index = 0; index < question.length; index++) {
-                if (korStringSimilarity.compareTwoStrings(parsedQuery.text, question[index].title) >= 0.33) {
-                    similarQuestion.push(question[index]);
+            question.forEach((item) => {
+                if (korStringSimilarity.compareTwoStrings(parsedQuery.text, item.title) >= 0.33) {
+                    similarQuestion.push(item);
                 }
-            }
+            });
 
             if (similarQuestion.length == 0) {
                 throw 'found zero results';
