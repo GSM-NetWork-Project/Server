@@ -16,13 +16,16 @@ kovfdb.Select = async (table, column = '*', query = {operator: 'AND'}) => {
         operator = query['operator']; delete query['operator'];
 
         selectQuery = `SELECT ${column} FROM ${table}`;
+
         seperator = '';
+        whereState = 'WHERE';
 
         if (typeof joinType == 'undefined') {
             seperator = `'`;
         }
         else {
             selectQuery += ` ${joinType.replace(/[^a-zA-Z ]/g, ' ')} ${joinTable}`
+            whereState = 'ON';
         }
 
         let queryString = []
@@ -40,7 +43,7 @@ kovfdb.Select = async (table, column = '*', query = {operator: 'AND'}) => {
                 operator = 'AND';
             }
 
-            selectQuery += ` WHERE ${queryString.join(` ${operator} `)}`;
+            selectQuery += ` ${whereState} ${queryString.join(` ${operator} `)}`;
         }
 
         pool.query(selectQuery, (err, results) => {
